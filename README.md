@@ -1,11 +1,22 @@
-- app window opener to interact with
--> either real app or terminal app
-- file picker to select an aduio file
-- audio player to play audio files
--> actions: play, pause, loop, skip, queue etc.
+# Music Player
 
-LATER
-- better UI
-- auto file fetch
-- API to fetch Audio Files from a CDN
-- Song Cover Support
+This is a little project I'm working to expand my Java knowledge.
+
+## To-Do
+
+### Core Features
+- [ ] App window for user interaction
+  - real GUI or terminal-based interface - still deciding
+- [ ] File picker to select audio files
+- [ ] Audio player functionality
+  - Actions: play, pause, loop, skip, queue
+
+### Future Expansions/Improvements
+- [ ] Improved user interface (UI)
+- [ ] Automatic file fetching from a local directory
+- [ ] API integration to fetch audio files from a CDN
+- [ ] Song cover / album art support
+
+## Notes
+
+Designed for learning purposes and gradual feature expansion!
