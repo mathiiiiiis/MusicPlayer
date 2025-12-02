@@ -3,7 +3,7 @@ import java.awt.*;
 import javax.swing.*;
 
 //Create a simple GUI window
-public class TopLevelWindow {
+public class main {
     private static JLabel textLabel;
     private static JButton addFilesButton;
 
@@ -43,7 +43,7 @@ public class TopLevelWindow {
         frame.setVisible(true);
     }
 
-    public static void main(String[] args) {
+    public main(String[] args) {
        SwingUtilities.invokeLater(() -> createWindow());
     }
 }
