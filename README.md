@@ -1,6 +1,6 @@
 # Music Player
 
-A small project designed to expand Java knowledge and experiment with GUI and audio features.
+This is a little project I'm working on to expand my Java knowledge.
 
 <br>
 <br>
