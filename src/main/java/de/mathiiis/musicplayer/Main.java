@@ -1,9 +1,12 @@
 package de.mathiiis.musicplayer;
+
+import de.mathiiis.musicplayer.utils.FilePicker;
 import java.awt.*; 
 import javax.swing.*;
+import java.io.File;
 
 //Create a simple GUI window
-public class main {
+class MainApp {
     private static JLabel textLabel;
     private static JButton addFilesButton;
 
@@ -14,25 +17,21 @@ public class main {
         //Create and set up the window
         JFrame frame = new JFrame("Music Player");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add(textLabel, BorderLayout.CENTER); //adds text to the JFrame
+        frame.getContentPane().add(textLabel, BorderLayout.CENTER);
 
         JPanel panel = new JPanel();
-        panel.add(addFilesButton); //adds button to JPanel
+        panel.add(addFilesButton);
 
         addFilesButton.addActionListener(e -> {
-            System.out.println("Button clicked!");
-            textLabel.setText("You clicked the Button!");
-
-            new javax.swing.Timer(1500, ev -> {
-                textLabel.setText("Press the Button!");
-                System.out.println("Changed text back");
-            }) {{
-                setRepeats(false);
-                start();
-            }};
+            File selected = FilePicker.pick();
+            if (selected != null){
+                textLabel.setText("Selected: " + selected.getName() + " :3");
+            } else{
+                textLabel.setText("No Fil selected :(");
+            }
         });
 
-        frame.getContentPane().add(panel, BorderLayout.SOUTH); //adds JPanel to JFrame
+        frame.getContentPane().add(panel, BorderLayout.SOUTH);
 
 
         //Display the window
@@ -43,7 +42,7 @@ public class main {
         frame.setVisible(true);
     }
 
-    public main(String[] args) {
-       SwingUtilities.invokeLater(() -> createWindow());
-    }
+     public static void main(String[] args) {
+         SwingUtilities.invokeLater(() -> createWindow());
+     }
 }

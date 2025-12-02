@@ -7,7 +7,7 @@ This is a little project I'm working to expand my Java knowledge.
 ### Core Features
 - [x] App window for user interaction
   - real GUI or terminal-based interface - decided to use Real GUI
-- [ ] File picker to select audio files
+- [x] File picker to select audio files
 - [ ] Audio player functionality
   - Actions: play, pause, loop, skip, queue
 
@@ -20,3 +20,10 @@ This is a little project I'm working to expand my Java knowledge.
 ## Notes
 
 Designed for learning purposes and gradual feature expansion!
+
+
+# Progress
+
+## Daily Logs
+- **Day 1:** [View Log](progress/day_1/log.md)
+- **Day 2:** [View Log](progress/day_2/log.md)
