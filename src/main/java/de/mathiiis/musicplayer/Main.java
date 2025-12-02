@@ -23,11 +23,16 @@ class MainApp {
         panel.add(addFilesButton);
 
         addFilesButton.addActionListener(e -> {
-            File selected = FilePicker.pick();
-            if (selected != null){
-                textLabel.setText("Selected: " + selected.getName() + " :3");
+            File[] selected = FilePicker.pick();
+
+            if (selected != null && selected.length > 0){
+                StringBuilder sb = new StringBuilder("Selected:\n");
+                for (File f : selected){
+                    sb.append("- ").append(f.getName()).append("\n");
+                }
+                textLabel.setText("<html>" + sb.toString().replace("\n", "<br>") + "</html>");
             } else{
-                textLabel.setText("No Fil selected :(");
+                textLabel.setText("No file selected :(");
             }
         });
 
